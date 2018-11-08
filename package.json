@@ -1,0 +1,26 @@
+{
+  "name": "bank-transactions",
+  "version": "1.0.0",
+  "description": "Transfer money between two accounts",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha ./test/**/*.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.2",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
+    "winston": "^3.1.0",
+    "winston-daily-rotate-file": "^3.5.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "sinon": "^7.1.1"
+  }
+}

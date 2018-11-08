@@ -1,0 +1,41 @@
+version: "3"
+services:
+  server:
+    build: .
+    volumes:
+     - .:/usr/app
+     - /usr/app/node_modules
+    ports:
+     - "8080:8080"
+    depends_on:
+     - mysqldb
+    environment:
+      NODE_ENV: production
+      MYSQL_HOST: mysql
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: 1234
+      MYSQL_DATABASE: bank_transactions
+      MYSQL_PORT: 3306
+      PORT: 8080
+    links:
+     - mysql:mysql
+    depends_on:
+     - mysql
+    expose:
+      - 8080
+    restart: always
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: bank_transactions
+      MYSQL_HOST: localhost
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: 1234
+    ports:
+      - "3307:3306"
+    volumes:
+      - /var/lib/mysql
+      - ./sample_data_dump.sql:/docker-entrypoint-initdb.d/sample_data_dump.sql
+    restart: unless-stopped
