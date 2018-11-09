@@ -12,7 +12,7 @@ Rewriting the '/transfer' api in NodeJS to facilitate transfer of money between 
 
 ## Installing
 
-    Execute the commands in the following order for local setup
+  Execute the commands in the following order for local setup
 
      - git clone https://github.com/tinaoct1/bank-transactions.git
      - cd bank-transactions
@@ -24,7 +24,7 @@ Rewriting the '/transfer' api in NodeJS to facilitate transfer of money between 
        and body: {"from": "456","to": "123","amount": 2.5}
 
 
-    For docker setup
+  For docker setup
 
      - docker pull tinaoct1/bank_transactions
      - docker-compose up
