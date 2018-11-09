@@ -16,7 +16,7 @@ Rewriting the '/transfer' api in NodeJS to facilitate transfer of money between 
 
      - git clone https://github.com/tinaoct1/bank-transactions.git
      - cd bank-transactions
-     - setup mysql with config specified in .env
+     - setup mysql with config specified in .env and create a database called bank_transactions
      - mysql -u root -ppassword bank_transactions < sample_data_dump.sql (This is to setup the sample data)
      - node app.js
 
@@ -25,9 +25,7 @@ Rewriting the '/transfer' api in NodeJS to facilitate transfer of money between 
 
 
   For docker setup
-
-     - docker pull tinaoct1/bank_transactions
-     - docker-compose up
+     - docker-compose up (at root level)
      - Call http://localhost:8080/transfer with headers: {content-type: application/json}
           and body: {"from": "456","to": "123","amount": 2.5}
 
