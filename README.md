@@ -24,9 +24,9 @@ Rewriting the '/transfer' api in NodeJS to facilitate transfer of money between 
        and body: {"from": "456","to": "123","amount": 2.5}
 
 
-  For docker setup
-     - docker-compose up (at root level)
-     - Call http://localhost:8080/transfer with headers: {content-type: application/json}
+     For docker setup
+       - docker-compose up (at root level)
+       - Call http://localhost:8080/transfer with headers: {content-type: application/json}
           and body: {"from": "456","to": "123","amount": 2.5}
 
 ## Running the tests
