@@ -1,6 +1,7 @@
 version: "3"
 services:
   server:
+    image: tinaoct1/bank_transactions
     build: .
     volumes:
      - .:/usr/app
@@ -8,7 +9,7 @@ services:
     ports:
      - "8080:8080"
     depends_on:
-     - mysqldb
+     - mysql
     environment:
       NODE_ENV: production
       MYSQL_HOST: mysql
